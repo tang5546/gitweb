@@ -1,14 +1,254 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!doctype html>
+<html><head>
+    <meta charset="utf-8">
+    <title>Profiles</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body><center>
-    <h1>PROFILE</h1><br>
-    <img src = "https://i.pinimg.com/originals/59/13/cd/5913cd0caadea4e4ff1a1255811e1a18.jpg" width="200" height="200">
+    <meta name="description" content="">
+    <meta name="author" content="Carlos Alvarez - Alvarez.is">
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/font-style.css" rel="stylesheet">
+    <link href="css/flexslider.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery.js"></script>    
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="js/lineandbars.js"></script>
     
-</body></center>
-</html>
+	<script type="text/javascript" src="js/dash-charts.js"></script>
+	<script type="text/javascript" src="js/gauge.js"></script>
+	
+	<!-- NOTY JAVASCRIPT -->
+	<script type="text/javascript" src="js/noty/jquery.noty.js"></script>
+	<script type="text/javascript" src="js/noty/layouts/top.js"></script>
+	<script type="text/javascript" src="js/noty/layouts/topLeft.js"></script>
+	<script type="text/javascript" src="js/noty/layouts/topRight.js"></script>
+	<script type="text/javascript" src="js/noty/layouts/topCenter.js"></script>
+	
+	<!-- You can add more layouts if you want -->
+	<script type="text/javascript" src="js/noty/themes/default.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/dash-noty.js"></script> This is a Noty bubble when you init the theme-->
+	<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="js/jquery.flexslider.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="js/admin.js"></script>
+      
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+   
+
+  	<!-- Google Fonts call. Font Used Open Sans & Raleway -->
+	<link href="http://fonts.googleapis.com/css?family=Raleway:400,300" rel="stylesheet" type="text/css">
+  	<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#btn-blog-next").click(function () {
+            $('#blogCarousel').carousel('next')
+        });
+        $("#btn-blog-prev").click(function () {
+            $('#blogCarousel').carousel('prev')
+        });
+
+        $("#btn-client-next").click(function () {
+            $('#clientCarousel').carousel('next')
+        });
+        $("#btn-client-prev").click(function () {
+            $('#clientCarousel').carousel('prev')
+        });
+
+    });
+
+    $(window).load(function () {
+
+        $('.flexslider').flexslider({
+            animation: "slide",
+            slideshow: true,
+            start: function (slider) {
+                $('body').removeClass('loading');
+            }
+        });
+    });
+
+</script>    
+  </head>
+  <body>
+  
+  	<!-- NAVIGATION MENU -->
+
+    <div class="navbar-nav navbar-inverse navbar-fixed-top">
+        <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="images/logo30.png" alt=""> BLOCKS </a>
+        </div> 
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html"><i class="icon-home icon-white"></i>Profile</a></li>                            
+              <li><a href="news.html"><i class="icon-th icon-white"></i> News</a></li>
+              <li><a href="graph.html"><i class="icon-lock icon-white"></i>Graph</a></li>
+			  <li><a href="gallery.html"><i class="icon-user icon-white"></i> Gallery</a></li>
+			  <li><a href="map.html"><i class="icon-user icon-white"></i> Map</a></li>
+			  <li><a href="image.html"><i class="icon-user icon-white"></i>Picture</a></li>
+
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div class="container">
+
+	  <!-- FIRST ROW OF BLOCKS -->     
+      <div class="row">
+
+      <!-- USER PROFILE BLOCK -->
+        <div class="col-sm-3 col-lg-3">
+      		<div class="dash-unit">
+	      		<dtitle>User Profile</dtitle>
+	      		<hr>
+				<div class="thumbnail">
+					<img src="images/kie.jpg" alt="Marcel Newman" class="img-circle" width="100" height="100">
+				</div><!-- /thumbnail -->
+				<h1>Thitiporn Saetern</h1>
+				<h3>5904101315</h3>
+				<br>
+					<div class="info-user">
+						<span aria-hidden="true" class="li_user fs1"></span>
+						<span aria-hidden="true" class="li_settings fs1"></span>
+						<span aria-hidden="true" class="li_mail fs1"></span>
+						<span aria-hidden="true" class="li_key fs1"></span>
+					</div>
+				</div>
+        </div>
+
+		 <!-- USER PROFILE BLOCK -->
+		 <div class="col-sm-3 col-lg-3">
+			<div class="dash-unit">
+				<dtitle>User Profile</dtitle>
+				<hr>
+			  <div class="thumbnail">
+				  <img src="images/nat.jpg" alt="Marcel Newman" class="img-circle" width="100" height="100">
+			  </div><!-- /thumbnail -->
+			  <h1>Natcha Teeralerttam</h1>
+			  <h3>5904101316</h3>
+			  <br>
+				  <div class="info-user">
+					  <span aria-hidden="true" class="li_user fs1"></span>
+					  <span aria-hidden="true" class="li_settings fs1"></span>
+					  <span aria-hidden="true" class="li_mail fs1"></span>
+					  <span aria-hidden="true" class="li_key fs1"></span>
+				  </div>
+			  </div>
+	  </div>
+
+	   <!-- USER PROFILE BLOCK -->
+	   <div class="col-sm-3 col-lg-3">
+		<div class="dash-unit">
+			<dtitle>User Profile</dtitle>
+			<hr>
+		  <div class="thumbnail">
+			  <img src="images/pam.jpg" alt="Marcel Newman" class="img-circle" width="100" height="100">
+		  </div><!-- /thumbnail -->
+		  <h1>Tidarat Inta</h1>
+		  <h3>5904101325</h3>
+		  <br>
+			  <div class="info-user">
+				  <span aria-hidden="true" class="li_user fs1"></span>
+				  <span aria-hidden="true" class="li_settings fs1"></span>
+				  <span aria-hidden="true" class="li_mail fs1"></span>
+				  <span aria-hidden="true" class="li_key fs1"></span>
+			  </div>
+		  </div>
+  </div>
+
+   <!-- USER PROFILE BLOCK -->
+   <div class="col-sm-3 col-lg-3">
+	<div class="dash-unit">
+		<dtitle>User Profile</dtitle>
+		<hr>
+	  <div class="thumbnail">
+		  <img src="images/phang.jpg" alt="Marcel Newman" class="img-circle" width="100" height="100">
+	  </div><!-- /thumbnail -->
+	  <h1>Supanna Chetawan</h1>
+	  <h3>5904101381</h3>
+	  <br>
+		  <div class="info-user">
+			  <span aria-hidden="true" class="li_user fs1"></span>
+			  <span aria-hidden="true" class="li_settings fs1"></span>
+			  <span aria-hidden="true" class="li_mail fs1"></span>
+			  <span aria-hidden="true" class="li_key fs1"></span>
+		  </div>
+	  </div>
+</div>
+
+ <!-- USER PROFILE BLOCK -->
+ <div class="col-sm-3 col-lg-3">
+	<div class="dash-unit">
+		<dtitle>User Profile</dtitle>
+		<hr>
+	  <div class="thumbnail">
+		  <img src="images/ploy.jpg" alt="Marcel Newman" class="img-circle" width="100" height="100">
+	  </div><!-- /thumbnail -->
+	  <h1>Supaporn Buatha</h1>
+	  <h3>5904101383</h3>
+	  <br>
+		  <div class="info-user">
+			  <span aria-hidden="true" class="li_user fs1"></span>
+			  <span aria-hidden="true" class="li_settings fs1"></span>
+			  <span aria-hidden="true" class="li_mail fs1"></span>
+			  <span aria-hidden="true" class="li_key fs1"></span>
+		  </div>
+	  </div>
+</div>
+
+ <!-- USER PROFILE BLOCK -->
+ <div class="col-sm-3 col-lg-3">
+	<div class="dash-unit">
+		<dtitle>User Profile</dtitle>
+		<hr>
+	  <div class="thumbnail">
+		  <img src="images/tang.png" alt="Marcel Newman" class="img-circle" width="100" height="100">
+	  </div><!-- /thumbnail -->
+	  <h1>Suwitchaya Nantachai</h1>
+	  <h3>5904101386</h3>
+	  <br>
+		  <div class="info-user">
+			  <span aria-hidden="true" class="li_user fs1"></span>
+			  <span aria-hidden="true" class="li_settings fs1"></span>
+			  <span aria-hidden="true" class="li_mail fs1"></span>
+			  <span aria-hidden="true" class="li_key fs1"></span>
+		  </div>
+	  </div>
+</div>
+
+ 
+	</div> <!-- /container -->
+	<div id="footerwrap">
+      	<footer class="clearfix"></footer>
+      	<div class="container">
+      		<div class="row">
+      			<div class="col-sm-12 col-lg-12">
+      			<p><img src="images/logo.png" alt=""></p>
+      			<p>Blocks Dashboard Theme - Crafted With Love - Copyright 2013</p>
+      			</div>
+
+      		</div><!-- /row -->
+      	</div><!-- /container -->		
+	</div><!-- /footerwrap -->
+          
+</body></html>
